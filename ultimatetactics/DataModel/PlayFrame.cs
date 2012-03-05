@@ -963,5 +963,16 @@ namespace UltimateTacticsDesigner.DataModel
         return false;
       }
     }
+
+    /// <summary>
+    /// Checks whether a given player is the thrower.
+    /// </summary>
+    /// <param name="player">Any player object.</param>
+    /// <returns>True if the player is the thrower. False is no thrower or 
+    /// player is not the thrower</returns>
+    internal bool IsThrower(Player player)
+    {
+      return (DiscFrameMovement.Thrower == player);
+    }
   }
 }

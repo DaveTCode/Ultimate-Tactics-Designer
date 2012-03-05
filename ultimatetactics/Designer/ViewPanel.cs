@@ -31,6 +31,7 @@ namespace UltimateTacticsDesigner.Designer
     internal VisualOverlay VisualOverlay { get; set; }
     internal PitchScreenCoordConverter Converter { get; set; }
     internal KeyPressHandler KeyPressHandler { get; set; }
+    internal ToolTip VariableToolTip { get; set; }
 
     public ViewPanel()
     {
@@ -48,6 +49,8 @@ namespace UltimateTacticsDesigner.Designer
       container.Add(this);
 
       InitializeComponent();
+
+      VariableToolTip = new ToolTip(container);
     }
 
     /// <summary>
@@ -124,6 +127,8 @@ namespace UltimateTacticsDesigner.Designer
       if (IsDesignMode)
       {
         Point mouseLocation = ClosestPointInPitch(e.Location);
+
+        ChooseTooltip(mouseLocation);
 
         if (CurrentTool == null)
         {
@@ -218,27 +223,6 @@ namespace UltimateTacticsDesigner.Designer
       }
     }
 
-    internal void UpdateTool(Point mouseLocation)
-    {
-      VisualOverlay.MouseLocation = ClosestPointInPitch(mouseLocation);
-      CurrentTool.handleMouseDown(VisualOverlay.MouseLocation,
-                                  CurrentFrame,
-                                  Converter,
-                                  VisualOverlay);
-
-      // A tool determines whether it is complete itself. 
-      if (CurrentTool.IsComplete)
-      {
-        if (CurrentTool.ModelChanged)
-        {
-          DesignerForm.ModelChanged();
-        }
-
-        VisualOverlay.Clear();
-        CurrentTool = null;
-      }
-    }
-
     protected override void OnMouseUp(MouseEventArgs e)
     {
       if (IsDesignMode)
@@ -267,6 +251,66 @@ namespace UltimateTacticsDesigner.Designer
             this.Refresh();
           }
         }
+      }
+    }
+
+    /// <summary>
+    /// Called whenever it is necessary to update the tool. This is typically 
+    /// done on mouse down and consists of calling the handleMouseDown function
+    /// on the current tool.
+    /// </summary>
+    /// <param name="mouseLocation"></param>
+    internal void UpdateTool(Point mouseLocation)
+    {
+      VisualOverlay.MouseLocation = ClosestPointInPitch(mouseLocation);
+      CurrentTool.handleMouseDown(VisualOverlay.MouseLocation,
+                                  CurrentFrame,
+                                  Converter,
+                                  VisualOverlay);
+
+      // A tool determines whether it is complete itself. 
+      if (CurrentTool.IsComplete)
+      {
+        if (CurrentTool.ModelChanged)
+        {
+          DesignerForm.ModelChanged();
+        }
+
+        VisualOverlay.Clear();
+        CurrentTool = null;
+      }
+    }
+
+    /// <summary>
+    /// Code to determine which tooltip should be displayed. This is called on 
+    /// mouse move so it is imperative that it contains as little logic as 
+    /// possible.
+    /// </summary>
+    /// <param name="coords">Mouse coordinates</param>
+    private void ChooseTooltip(Point coords)
+    {
+      PointF pitchCoords = Converter.screenToPitchCoords(coords);
+
+      Player player = CurrentFrame.GetClosestPlayer(pitchCoords, 
+                                                    Settings.Default.PlayerDiameter / 2.0f);
+
+      if (player != null)
+      {
+        if (VariableToolTip.GetToolTip(this) == "")
+        {
+          if (CurrentFrame.IsThrower(player))
+          {
+            VariableToolTip.SetToolTip(this, "Shift + Click to draw flight path");
+          }
+          else
+          {
+            VariableToolTip.SetToolTip(this, "Ctrl + Click to draw cut");
+          }
+        }
+      }
+      else
+      {
+        VariableToolTip.RemoveAll();
       }
     }
 
