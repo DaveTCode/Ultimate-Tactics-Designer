@@ -1,0 +1,54 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="UltimateTacticsDesigner.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PitchWidth" Type="System.Single" Scope="Application">
+      <Value Profile="(Default)">37</Value>
+    </Setting>
+    <Setting Name="PitchLength" Type="System.Single" Scope="Application">
+      <Value Profile="(Default)">110</Value>
+    </Setting>
+    <Setting Name="EndzoneDepth" Type="System.Single" Scope="Application">
+      <Value Profile="(Default)">23</Value>
+    </Setting>
+    <Setting Name="BrickDistance" Type="System.Single" Scope="Application">
+      <Value Profile="(Default)">18</Value>
+    </Setting>
+    <Setting Name="BrickRadius" Type="System.Single" Scope="Application">
+      <Value Profile="(Default)">0.5</Value>
+    </Setting>
+    <Setting Name="PlayerDiameter" Type="System.Single" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="PitchColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">0, 64, 0</Value>
+    </Setting>
+    <Setting Name="MaxDiscSpeed" Type="System.Single" Scope="Application">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="MinDiscSpeed" Type="System.Single" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="DefaultDiscSpeed" Type="System.Single" Scope="Application">
+      <Value Profile="(Default)">16</Value>
+    </Setting>
+    <Setting Name="MaxPlayerSpeed" Type="System.Single" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="MinPlayerSpeed" Type="System.Single" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="DefaultPlayerSpeed" Type="System.Single" Scope="Application">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="LineColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="Version" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">0.9.9</Value>
+    </Setting>
+    <Setting Name="VersionServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:5503/Home/Version</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

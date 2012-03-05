@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09ACB0DC-8B54-4835-8D4D-AD889BDEE644}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PlaybookWeb</RootNamespace>
+    <AssemblyName>PlaybookWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\DataManager.cs" />
+    <Compile Include="Models\TeamModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\PlayDatabase.mdf" />
+    <Content Include="App_Data\PlayDatabase_log.ldf">
+      <DependentUpon>PlayDatabase.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\css\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Content\css\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Content\css\images\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="Content\css\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Content\css\images\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="Content\css\images\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="Content\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_a83300_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\css\jquery-ui-1.8.14.custom.css" />
+    <Content Include="Content\images\add.png" />
+    <Content Include="Content\images\add_20.png" />
+    <Content Include="Content\images\ajax-loader.gif" />
+    <Content Include="Content\images\Body-BG.jpg" />
+    <Content Include="Content\images\contact-icon.jpg" />
+    <Content Include="Content\images\contact-icon.png" />
+    <Content Include="Content\images\delete.png" />
+    <Content Include="Content\images\donate-icon.png" />
+    <Content Include="Content\images\download-icon.png" />
+    <Content Include="Content\images\edit.png" />
+    <Content Include="Content\images\faq-icon.png" />
+    <Content Include="Content\images\Footer-BG.jpg" />
+    <Content Include="Content\images\fullscreen-hover.png" />
+    <Content Include="Content\images\fullscreen-sprite.png" />
+    <Content Include="Content\images\fullscreen.png" />
+    <Content Include="Content\images\Grey-Gradient-B.png" />
+    <Content Include="Content\images\Grey-Gradient-BL.png" />
+    <Content Include="Content\images\Grey-Gradient-BR.png" />
+    <Content Include="Content\images\Grey-Gradient-T.png" />
+    <Content Include="Content\images\Grey-Gradient-TL.png" />
+    <Content Include="Content\images\Grey-Gradient-TR.png" />
+    <Content Include="Content\images\Header-BG.png" />
+    <Content Include="Content\images\Horizontal-Sep.jpg" />
+    <Content Include="Content\images\inputbg.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\mediabar-bg.png" />
+    <Content Include="Content\images\menubg.png" />
+    <Content Include="Content\images\pagebg.png" />
+    <Content Include="Content\images\pause-hover.png" />
+    <Content Include="Content\images\pause.png" />
+    <Content Include="Content\images\play-hover.png" />
+    <Content Include="Content\images\play-pause-sprites.png" />
+    <Content Include="Content\images\play.png" />
+    <Content Include="Content\images\player-home-icon.png" />
+    <Content Include="Content\images\Spacer.gif" />
+    <Content Include="Content\images\tearfund.png" />
+    <Content Include="Content\images\Title-BG-Green.png" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\canvas_player-1.0.js" />
+    <Content Include="Scripts\excanvas.compiled.js" />
+    <Content Include="Scripts\jquery-1.6.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.14.custom.min.js" />
+    <Content Include="Scripts\jquery.BlockUI.js" />
+    <Content Include="Scripts\jquery.getURLParam.js" />
+    <Content Include="Scripts\jquery.highlightFade.js" />
+    <Content Include="Scripts\jquery.scrollTo-min.js" />
+    <Content Include="Scripts\jquery.watermark.min.js" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Home\Donate.aspx" />
+    <Content Include="Views\Home\Faq.aspx" />
+    <Content Include="Views\Shared\RightMenu.ascx" />
+    <Content Include="Views\Team\ViewPlays.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\fonts\TitilliumText22L005-webfont.ttf" />
+    <Content Include="Content\UltimateTacticsDesigner.zip" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5503</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

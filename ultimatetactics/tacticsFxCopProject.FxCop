@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="10.0" Name="My FxCop Project">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">$(FxCopDir)\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded, Good, Noise" NewOnly="False" />
+   <Report Status="Active, Good, Noise" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="en-US" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <AssemblyReferenceDirectories>
+   <Directory>$(ProjectDir)/bin/Release/</Directory>
+  </AssemblyReferenceDirectories>
+  <Target Name="$(ProjectDir)/bin/Debug/UltimateTacticsDesigner.exe" Analyze="True" AnalyzeAllChildren="False">
+   <Modules AnalyzeAllChildren="False">
+    <Module Name="ultimatetacticsdesigner.exe" Analyze="True" AnalyzeAllChildren="False">
+     <Namespaces AnalyzeAllChildren="False">
+      <Namespace Name="" Analyze="True" AnalyzeAllChildren="True" />
+      <Namespace Name="UltimateTacticsDesigner" Analyze="True" AnalyzeAllChildren="True" />
+      <Namespace Name="UltimateTacticsDesigner.DataModel" Analyze="True" AnalyzeAllChildren="True" />
+      <Namespace Name="UltimateTacticsDesigner.Designer" Analyze="True" AnalyzeAllChildren="False">
+       <Types AnalyzeAllChildren="False">
+        <Type Name="AddBluePlayerTool" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="AddRedPlayerTool" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="DiscFlightTool" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="DiscTool" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="FrameCollection" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="FrameCollectionContextMenu" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="KeyPressHandler" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="LinkCreateDialog" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="LinkCreateDialogResult" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="MainDesignerForm" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="MainDesignerForm+&lt;&gt;c__DisplayClass5" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="ModelHistory" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="ModelHistoryItem" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="MoveItemTool" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="PlaceCutTool" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="PlaceTriggerTool" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="SpeedDialog" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="TextInputDialog" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="Tool" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="VersionChecker" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="ViewPanel" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="ViewPanelContextMenu" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="VisualOverlay" Analyze="True" AnalyzeAllChildren="True" />
+       </Types>
+      </Namespace>
+      <Namespace Name="UltimateTacticsDesigner.Properties" Analyze="True" AnalyzeAllChildren="True" />
+      <Namespace Name="UltimateTacticsDesigner.Renderer" Analyze="True" AnalyzeAllChildren="True" />
+     </Namespaces>
+     <Resources AnalyzeAllChildren="True" />
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityTransparencyRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="10.0">
+  <Targets>
+   <Target Name="$(ProjectDir)/bin/Debug/UltimateTacticsDesigner.exe">
+    <Modules>
+     <Module Name="ultimatetacticsdesigner.exe">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2011-12-27 15:14:25Z">
+        <Issue Name="NoStrongName">
+         <Item>'UltimateTacticsDesigner.exe'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2011-12-27 15:14:25Z">
+        <Issue>
+         <Item>'UltimateTacticsDesigner.exe'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Created="2011-12-27 15:14:25Z">
+        <Issue>
+         <Item>'UltimateTacticsDesigner.exe'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="UltimateTacticsDesigner">
+        <Types>
+         <Type Name="BitmapExtensions">
+          <Members>
+           <Member Name="#SaveJPG100(System.Drawing.Bitmap,System.IO.Stream)">
+            <Messages>
+             <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'bmp'</Item>
+               <Item>'BitmapExtensions.SaveJPG100(Bitmap, Stream)'</Item>
+               <Item>'Bitmap'</Item>
+               <Item>'Image'</Item>
+              </Issue>
+             </Message>
+             <Message Id="JPG" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-12-27 15:14:25Z">
+              <Issue Name="Member">
+               <Item>JPG</Item>
+               <Item>'BitmapExtensions.SaveJPG100(Bitmap, Stream)'</Item>
+               <Item>Jpg</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SaveJPG100(System.Drawing.Bitmap,System.String)">
+            <Messages>
+             <Message Id="filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2011-12-27 15:14:25Z">
+              <Issue Name="MemberParameterShouldBeCompoundWord">
+               <Item>'BitmapExtensions.SaveJPG100(Bitmap, string)'</Item>
+               <Item>filename</Item>
+               <Item>'filename'</Item>
+               <Item>fileName</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'bmp'</Item>
+               <Item>'BitmapExtensions.SaveJPG100(Bitmap, string)'</Item>
+               <Item>'Bitmap'</Item>
+               <Item>'Image'</Item>
+              </Issue>
+             </Message>
+             <Message Id="JPG" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-12-27 15:14:25Z">
+              <Issue Name="Member">
+               <Item>JPG</Item>
+               <Item>'BitmapExtensions.SaveJPG100(Bitmap, string)'</Item>
+               <Item>Jpg</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="VideoOutputter">
+          <Members>
+           <Member Name="#FFMPEGToVideo(System.String,UltimateTacticsDesigner.DataModel.PlayModel)">
+            <Messages>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-12-27 15:14:25Z">
+              <Issue Name="IFormatProviderAlternateString">
+               <Item>'int.ToString()'</Item>
+               <Item>'VideoOutputter.FFMPEGToVideo(string, PlayModel)'</Item>
+               <Item>'int.ToString(IFormatProvider)'</Item>
+               <Item>'CultureInfo.CurrentCulture'</Item>
+               <Item>'CultureInfo.InvariantCulture'</Item>
+              </Issue>
+              <Issue Name="IFormatProviderAlternateString">
+               <Item>'int.ToString()'</Item>
+               <Item>'VideoOutputter.FFMPEGToVideo(string, PlayModel)'</Item>
+               <Item>'int.ToString(IFormatProvider)'</Item>
+               <Item>'CultureInfo.CurrentCulture'</Item>
+               <Item>'CultureInfo.InvariantCulture'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ModelToImageFiles(System.String,UltimateTacticsDesigner.DataModel.PlayModel)">
+            <Messages>
+             <Message Id="System.Int32.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-12-27 15:14:25Z">
+              <Issue Name="IFormatProviderAlternateString">
+               <Item>'int.ToString(string)'</Item>
+               <Item>'VideoOutputter.ModelToImageFiles(string, PlayModel)'</Item>
+               <Item>'int.ToString(string, IFormatProvider)'</Item>
+               <Item>'CultureInfo.CurrentCulture'</Item>
+               <Item>'CultureInfo.InvariantCulture'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="UltimateTacticsDesigner.DataModel">
+        <Types>
+         <Type Name="CutRatio">
+          <Members>
+           <Member Name="#UniqueId">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'CutRatio.UniqueId'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CyclicDataModelException">
+          <Messages>
+           <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Created="2011-12-27 15:14:25Z">
+            <Issue>
+             <Item>'CyclicDataModelException'</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="ImplementStandardExceptionConstructors" Category="Microsoft.Design" CheckId="CA1032" Created="2011-12-27 15:14:25Z">
+            <Issue Name="MissingConstructor">
+             <Item>'CyclicDataModelException'</Item>
+             <Item>protected CyclicDataModelException(SerializationInfo, StreamingContext)</Item>
+            </Issue>
+            <Issue Name="MissingConstructor">
+             <Item>'CyclicDataModelException'</Item>
+             <Item>public CyclicDataModelException(String)</Item>
+            </Issue>
+            <Issue Name="MissingConstructor">
+             <Item>'CyclicDataModelException'</Item>
+             <Item>public CyclicDataModelException(String, Exception)</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="DesignToViewConverter">
+          <Members>
+           <Member Name="#GenerateDiscFlight(System.Int32)">
+            <Messages>
+             <Message Id="a" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'DesignToViewConverter.GenerateDiscFlight(int)'</Item>
+               <Item>'a'</Item>
+               <Item>'double'</Item>
+              </Issue>
+             </Message>
+             <Message Id="curr" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'DesignToViewConverter.GenerateDiscFlight(int)'</Item>
+               <Item>'curr'</Item>
+               <Item>'PointF'</Item>
+              </Issue>
+             </Message>
+             <Message Id="end" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'DesignToViewConverter.GenerateDiscFlight(int)'</Item>
+               <Item>'end'</Item>
+               <Item>'PointF'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DiscMovement">
+          <Members>
+           <Member Name="#UniqueId">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'DiscMovement.UniqueId'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="LinearMovement">
+          <Members>
+           <Member Name="#.ctor(System.Single,System.Single,System.Int32,UltimateTacticsDesigner.DataModel.Player)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'LinearMovement.LinearMovement(float, float, int, Player)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PlayFrame">
+          <Members>
+           <Member Name="#BlueTeamPlayers">
+            <Accessors>
+             <Accessor Name="#get_BlueTeamPlayers()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-12-27 15:14:25Z">
+                <Issue>
+                 <Item>'PlayFrame.BlueTeamPlayers.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#GetPauseTriggerById(System.Int64)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'PlayFrame.GetPauseTriggerById(long)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Notes">
+            <Accessors>
+             <Accessor Name="#get_Notes()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-12-27 15:14:25Z">
+                <Issue>
+                 <Item>'PlayFrame.Notes.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#RedTeamPlayers">
+            <Accessors>
+             <Accessor Name="#get_RedTeamPlayers()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-12-27 15:14:25Z">
+                <Issue>
+                 <Item>'PlayFrame.RedTeamPlayers.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Team">
+          <Members>
+           <Member Name="#SelectedSprite">
+            <Accessors>
+             <Accessor Name="#get_SelectedSprite()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-12-27 15:14:25Z">
+                <Issue>
+                 <Item>'Team.SelectedSprite.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="UltimateTacticsDesigner.Designer">
+        <Types>
+         <Type Name="DiscFlightTool">
+          <Members>
+           <Member Name="#handleMouseUp(System.Drawing.Point,UltimateTacticsDesigner.DataModel.PlayFrame,UltimateTacticsDesigner.Renderer.PitchScreenCoordConverter,UltimateTacticsDesigner.Designer.VisualOverlay)">
+            <Messages>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'DiscFlightTool.handleMouseUp(Point, PlayFrame, PitchScreenCoordConverter, VisualOverlay)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FrameCollection">
+          <Messages>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2011-12-27 15:14:25Z">
+            <Issue Name="TypeNoAlternate">
+             <Item>'FrameCollection'</Item>
+             <Item>Collection</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="KeyPressHandler">
+          <Members>
+           <Member Name="#IsKeyPressed()">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'KeyPressHandler.IsKeyPressed()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#mKeyTable">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'KeyPressHandler.mKeyTable'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MainDesignerForm">
+          <Members>
+           <Member Name="#Dispose(System.Boolean)">
+            <Messages>
+             <Message Id="mFrameRenderer" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'MainDesignerForm'</Item>
+               <Item>'MainDesignerForm.mFrameRenderer'</Item>
+               <Item>'FrameRenderer'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Finalize()">
+            <Messages>
+             <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Created="2011-12-27 15:14:25Z">
+              <Issue Name="FinalizeImplementation">
+               <Item>'MainDesignerForm.~MainDesignerForm()'</Item>
+              </Issue>
+              <Issue Name="FinalizeOverride">
+               <Item>'MainDesignerForm'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ModelChanged()">
+            <Messages>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'MainDesignerForm.ModelChanged()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#mVersionChecker">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'MainDesignerForm.mVersionChecker'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#playAllToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <Messages>
+             <Message Id="frame" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'MainDesignerForm.playAllToolStripMenuItem_Click(object, EventArgs)'</Item>
+               <Item>'frame'</Item>
+               <Item>'PlayFrame'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SetPlayerSpeed(UltimateTacticsDesigner.DataModel.Player)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-12-27 15:14:25Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'MainDesignerForm.SetPlayerSpeed(Player)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SpeedDialog">
+          <Members>
+           <Member Name="#GetSpeed()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'SpeedDialog.GetSpeed()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="TextInputDialog">
+          <Members>
+           <Member Name="#GetText()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'TextInputDialog.GetText()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="VersionChecker">
+          <Members>
+           <Member Name="#CheckVersions()">
+            <Messages>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'VersionChecker.CheckVersions()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetRemoteVersion()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'VersionChecker.GetRemoteVersion()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-12-27 15:14:25Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'VersionChecker.GetRemoteVersion()'</Item>
+              </Issue>
+             </Message>
+             <Message Id="e" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'VersionChecker.GetRemoteVersion()'</Item>
+               <Item>'e'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ViewPanelContextMenu">
+          <Members>
+           <Member Name="#AddPauseTrigger_Click(System.Object,System.EventArgs)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'ViewPanelContextMenu.AddPauseTrigger_Click(object, EventArgs)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="UltimateTacticsDesigner.Renderer">
+        <Types>
+         <Type Name="FrameRenderer">
+          <Members>
+           <Member Name="#DrawCross(System.Drawing.Graphics,System.Drawing.Pen,System.Drawing.Point,System.Int32)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-12-27 15:14:25Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'FrameRenderer.DrawCross(Graphics, Pen, Point, int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#DrawSmallPlayer(System.Drawing.Graphics,UltimateTacticsDesigner.DataModel.Player,System.Drawing.PointF,UltimateTacticsDesigner.Renderer.PitchScreenCoordConverter)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-12-27 15:14:25Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'FrameRenderer.DrawSmallPlayer(Graphics, Player, PointF, PitchScreenCoordConverter)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#DrawSprite(System.Drawing.Graphics,UltimateTacticsDesigner.Renderer.PitchScreenCoordConverter,System.Drawing.Image,System.Drawing.PointF,System.Single,System.Single)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-12-27 15:14:25Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'FrameRenderer.DrawSprite(Graphics, PitchScreenCoordConverter, Image, PointF, float, float)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#DrawString(System.Drawing.Graphics,UltimateTacticsDesigner.Renderer.PitchScreenCoordConverter,System.String,System.Drawing.PointF,System.Drawing.Font,System.Drawing.Brush)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-12-27 15:14:25Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'FrameRenderer.DrawString(Graphics, PitchScreenCoordConverter, string, PointF, Font, Brush)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#DrawTrigger(System.Drawing.Graphics,UltimateTacticsDesigner.DataModel.Trigger,UltimateTacticsDesigner.Renderer.PitchScreenCoordConverter)">
+            <Messages>
+             <Message Id="locationToDraw" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'FrameRenderer.DrawTrigger(Graphics, Trigger, PitchScreenCoordConverter)'</Item>
+               <Item>'locationToDraw'</Item>
+               <Item>'PointF'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#mPitchColor">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'FrameRenderer.mPitchColor'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PitchScreenCoordConverter">
+          <Members>
+           <Member Name="#calculatePitchRatio(System.Drawing.Graphics)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-12-27 15:14:25Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'PitchScreenCoordConverter.calculatePitchRatio(Graphics)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#DisplayChanged(System.Drawing.Graphics)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-12-27 15:14:25Z">
+              <Issue>
+               <Item>'PitchScreenCoordConverter.DisplayChanged(Graphics)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+    <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+    <Resolution Name="Default">{0} appears to have no upstream public or protected callers.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823">
+    <Resolution Name="Default">It appears that field {0} is never used or is only ever assigned to. Use this field or remove it.</Resolution>
+   </Rule>
+   <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+    <Resolution Name="MemberParameterShouldBeCompoundWord">In member {0}, the discrete term '{1}' in parameter name {2} should be expressed as a compound word, '{3}'.</Resolution>
+   </Rule>
+   <Rule TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011">
+    <Resolution Name="Default">Consider changing the type of parameter {0} in {1} from {2} to its base type {3}. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Resolution>
+   </Rule>
+   <Rule TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213">
+    <Resolution Name="Default">{0} contains field {1} that is of IDisposable type: {2}. Change the Dispose method on {0} to call Dispose or Close on this field.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+    <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+    <Resolution Name="Member">Correct the casing of '{0}' in member name {1} by changing it to '{2}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711">
+    <Resolution Name="TypeNoAlternate">Rename type name {0} so that it does not end in '{1}'.</Resolution>
+   </Rule>
+   <Rule TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063">
+    <Resolution Name="FinalizeImplementation">Modify {0} so that it calls Dispose(false) and then returns.</Resolution>
+    <Resolution Name="FinalizeOverride">Remove the finalizer from type {0}, override Dispose(bool disposing), and put the finalization logic in the code path where 'disposing' is false.</Resolution>
+   </Rule>
+   <Rule TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240">
+    <Resolution Name="Default">Add an implementation of GetObjectData to type {0}.</Resolution>
+   </Rule>
+   <Rule TypeName="ImplementStandardExceptionConstructors" Category="Microsoft.Design" CheckId="CA1032">
+    <Resolution Name="MissingConstructor">Add the following constructor to {0}: {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+    <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824">
+    <Resolution Name="Default">Because assembly {0} contains a ResX-based resource file, mark it with the NeutralResourcesLanguage attribute, specifying the language of the resources within the assembly. This could improve lookup performance the first time a resource is retrieved.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+    <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   </Rule>
+   <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+    <Resolution Name="Default">{0} declares a variable, {1}, of type {2}, which is never used or is only assigned to. Use this variable or remove it.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+    <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300">
+    <Resolution Name="Default">Change {0} to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Resolution>
+   </Rule>
+   <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+    <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>

@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!DOCTYPE HTML>
+<html>
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/css/jquery-ui-1.8.14.custom.css" rel="Stylesheet" type="text/css" />
+
+    <script src="../../Scripts/jquery-1.6.2.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-ui-1.8.14.custom.min.js" type="text/javascript"></script>
+</head>
+
+<body id="Body">
+  <div id="Page">
+    <div id="Background"></div>
+    <div id="Header"></div>
+    <div id="Content">
+      <div id="Panes">
+        <div id="main">
+          <div id="LogoRow">
+            <a title="Playbook" href="/">
+              <img src="/Content/images/Logo.png" alt="Playbook home" style="border-width:0px;" />
+            </a>
+            <div class="LogoRowRight">
+              <% Html.RenderPartial("LogOnUserControl"); %>
+            </div>
+          </div>
+
+          <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+      </div>
+    </div>
+    <div id="Footer">
+      <div class="Content">
+        <div id="Copyright">
+          <span id="CopyrightLabel" class="SkinObject">Copyright 2011 by David Tyler</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
