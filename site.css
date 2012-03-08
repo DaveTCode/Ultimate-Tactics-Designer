@@ -1,0 +1,26 @@
+body {
+  margin-top: 1.0em;
+  background-color: #607480;
+  font-family: Helvetica, Arial, FreeSans, san-serif;
+}
+#container {
+  margin: 50px auto;
+  padding: 5px 10px 20px 10px;
+  width: 800px;
+  background-color: #FFFFFF;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+h1 { font-size: 2.8em; color: #c63131; margin-bottom: 3px; }
+h1 .small { font-size: 0.4em; }
+h1 a { text-decoration: none }
+h2 { font-size: 1.5em; color: #c63131; }
+h3 { text-align: center; color: #c63131; }
+a { color: #c63131; }
+pre { background: #000; color: #fff; padding: 15px;}
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+
+.download { margin-top: 20px; }
+.description { font-style: italic; }
+
+.right { float: right; }
