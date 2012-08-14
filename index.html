@@ -1,55 +1,261 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html>
-<head>
-  <meta charset='utf-8'>
-
-  <title>Ultimate Tactics Designer @ GitHub</title>
-
-  <link rel="stylesheet" type="text/css" href="site.css" />
-</head>
-
-<body>
-  <a href="https://github.com/DaveTCode/Ultimate-Tactics-Designer"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="right">
-      <a href="https://github.com/DaveTCode/Ultimate-Tactics-Designer/zipball/master">
-        <img class="download" border="0" src="download.png" alt="Download"></a>
-    </div>
-
-    <h1>
-      <a href="https://github.com/DaveTCode/Ultimate-Tactics-Designer"><img src="logo.png" alt="ePlaybook" /></a>
-    </h1>
-    <div class="description">"Watch your plays come to life"</div>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Playbook by David Tyler</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pygment_trac.css">
+    <link rel="stylesheet" href="css/ppy.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="js/jquery.popeye-2.1.min.js"></script>
+    <script src="js/main.js"></script>
     
-    <h2>Key Features</h2>
-    <ul>
-      <li>Curved disc flight</li>
-      <li>Triggered player start times</li>
-      <li>Output to video</li>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#overviewImage").popeye();
+        });
+    </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Playbook</h1>
+        <p>Watch your plays come to life</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/DaveTCode/Ultimate-Tactics-Designer" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="Playbook.zip" class="button">Installer</a></li>
+            <li><a href="Playbook.zip" class="button">ZIP</a></li>
+          </ul>
+        </div>
+      </div>
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h2>Overview</h2>
+
+<p>Playbook is a tactics designer for Ultimate which allows coaches to design and view their plays and create videos for their team.</p>
+
+<div style="clear:both">&nbsp;</div>
+<div class="ppy" id="overviewImage">
+    <ul class="ppy-imglist">
+        <li>
+            <a href="images/overview-image.png">
+                <img src="images/overview-thumbnail.png" alt="" />
+            </a>
+        </li>
     </ul>
-    
-    <h2>Tutorial Video</h2>
-    <p></p>
-    
-    <h2>Contact</h2>
-    <p>
-      David Tyler (<a href="mailto://davet.code@gmail.com">davet.code@gmail.com</a>)<br/>
-    </p>
-    
-    <h2>Developer</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/DaveTCode/Ultimate-Tactics-Designer/zipball/master">zip</a> or
-      <a href="https://github.com/DaveTCode/Ultimate-Tactics-Designer/tarball/master">tar formats.</a>
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/DaveTCode/Ultimate-Tactics-Designer</pre>
-    </p>
+    <div class="ppy-outer">
+        <div class="ppy-stage">
+            <div class="ppy-nav">
+                <a class="ppy-prev" title="Previous image">Previous image</a>
+                <a class="ppy-switch-enlarge" title="Enlarge">Enlarge</a>
+                <a class="ppy-switch-compact" title="Close">Close</a>
+                <a class="ppy-next" title="Next image">Next image</a>
+            </div>
+        </div>
+    </div>
+    <div class="ppy-caption">
+        <div class="ppy-counter">
+            Image <strong class="ppy-current"></strong> of <strong class="ppy-total"></strong> 
+        </div>
+        <span class="ppy-text"></span>
+    </div>
+</div>
+<div style="clear:both">&nbsp;</div>
 
-  </div>
+<h2>Installation</h2>
 
-</body>
+<p>Download the zip file from the link above and extract to any directory. The application can be run directly and does not need any extra installation.</p>
+
+<h2>Players</h2>
+
+<h3>Adding a player</h3>
+
+<p>To add a player use the buttons at the top of the screen to select a color and then click on the play area where you want to place the new player.</p>
+
+<h3>Moving a player</h3>
+
+<p>When hovering over various elements in the application (including players) you'll see that the mouse cursor changes to a hand. When this icon appears you can move the element by dragging it in the application.</p>
+
+<h3>Deleting a player</h3>
+
+<p>To delete a player right click and select "Remove Player"</p>
+
+<h3>Editing player speed</h3>
+
+<p>Occasionally you may want one player to be moving slower or faster than everyone else on the screen. To achieve this right click on the player and choose "Set player speed".
+This is a slider which affects the speed of the player. Select the appropriate value and click ok (or cancel to exit the dialog without changing speed).</p>
+
+<h2>Cuts</h2>
+
+<h3>Drawing a new cut</h3>
+
+<p>If you hover over any given player (who is not holding the disc) then you'll see a tooltip indicating that you should use ctrl + click to draw a cut.
+
+To do this, hold ctrl and drag from the player to the location where the first part of the cut should end. Each section of a cut must be a straight line but a cut can be made of multiple sections.
+Add another section to the cut by hovering over the end of the cut and using ctrl + click to draw the next segment in the same way.
+
+<h3>Moving cuts</h3>
+
+Only the change of direction points on a cut can be moved. To do this hover over the end of the cut and you'll see the mouse cursor change to a hand indicating that you can move that item.
+Drag and drop it where you want the end of the cut to be.
+
+<h3>Removing cuts</h3>
+
+There are two ways to remove cuts:
+
+<ol>
+<li>Right click on the player who is cutting and choose "Clear cuts"</li>
+<li>Right click somewhere on the cut and choose either "Clear cuts" to remove all cuts for that player or "Clear from here" to remove this cut segment and all following it</li>
+</ol>
+
+<h2>Triggers</h2>
+
+<p>It is possible to set a frame up so that a player moves when another player reaches a certain point along their cut. This allows
+for much more complex plays.</p>
+
+<h3>Creating a trigger</h3>
+
+<p>Right click on the player who you want to start cutting second and choose "Add Trigger". Move the mouse to another players cut and 
+you'll see that a dashed circle appears on the cut. This is the point at which the original player will start moving. Click to place the trigger.</p>
+
+<h3>Moving a trigger</h3>
+
+<p>Triggers can be moved in the normal way by dragging them. They can only be placed on cuts of players who are not the one being triggered so the 
+icon will track these cuts.</p>
+
+<h3>Deleting a trigger</h3>
+
+<p>To remove a trigger you have two options:</p>
+
+<ol>
+    <li>Right click on the player who is going to run second and choose "Clear Trigger"</li>
+    <li>Right click on the trigger itself and choose "Clear Trigger"</li>
+</ol>
+
+<h2>Disc Flight</h2>
+
+<h3>Giving the disc to a player</h3>
+
+<p>To give the disc to a player click the disc icon in the toolbar at the top of the screen (note that since you can only have one disc per frame the icon disappears)
+and click on the player you want to hold the disc.</p>
+
+<h3>Removing the disc from the scene</h3>
+
+<p>Right click on the player with the disc and choose "Remove Disc". This will return the disc to the top toolbar.</p>
+
+<h3>Throwing to a cut</h3>
+
+<p>Hover over the player with the disc and you'll see a tooltip saying "Shift + Click to draw flight path". If you hold shift and drag to 
+the end of a cut then the disc will be thrown there.</p>
+
+<h3>Throwing to the floor</h3>
+
+<p>As for throwing to a cut except that if you don't drag to the end of a cut then you can throw to that point on the pitch. If you
+do this then the disc will be thrown at the start of the frame.</p>
+
+<h3>Curved flight path</h3>
+
+<p>Once you've created a disc path to either a cut or the floor then you'll notice a small white box halfway along the flight path.
+If you drag this to somewhere else on the pitch then you'll see the flight path change to a curve.</p>
+
+<h3>Moving the disc multiple times</h2>
+
+<p>In most plays the disc will need to move more than once. In this application that is achieved using separate frames for each disc movement (see next section).</p>
+
+<h2>Frames</h2>
+
+<p>Each frame in Playbook consists of multiple player movements and a single disc movement. New frames are required whenever you need to 
+move the disc more than once.</p>
+
+<p>Frames in playbook are linked together so that a player in frame 2 will start at the end of their movement in frame 1. You can remove this 
+linking if required (see below).</p>
+
+<h3>Creating a new frame</h3>
+
+<p>To create a new frame right click in the frames box at the bottom of the screen and choose "New Frame". Each player fromk the previous frame will 
+appear in the new frame at the end of their cut from the previous frame.</p>
+
+<h3>Reseting the frame</h3>
+
+<p>It is possible to reset a frame by right clicking on it and choosing "Reset Frame". This will remove all players, cuts 
+and the disc leaving you with a blank slate.</p>
+
+<h3>Deleting a frame</h3>
+
+<p>You can delete a frame by right clicking on it in the frame panel (bottom of the screen) and choosing "Delete Frame". If this frame is between 
+two other frames then they will not be linked when this one is deleted.</p>
+
+<h3>Unlinking frames</h3>
+
+<p>If you need players to start at a different location in frame B from their ending location in frame A then you can "unlink" the frames by 
+clicking on the lock icon between the two frames.</p>
+
+<h3>Relinking frames</h3>
+
+<p>If you need to relink two frames then you can click on the blank lock icon between the frames. This will ask you which frame to use as the master.
+
+<ul>
+    <li><strong>Left</strong> - If you choose the left frame as master then the starting position of all players on the second frame will be modified to 
+match their ending positions on the first frame.</li>
+    <li><strong>Right</strong> - If you choose the right frame as master then the ending position of all players on the first frame will be modified to
+match their starting positions on the second frame.</li>
+</ul>
+
+<h2>Video</h2>
+
+<p>One of the key features of Playbook is the ability to create high quality videos which can be sent to teammates or uploaded to youtube.</p>
+
+<p>Creating a video is a simple as going to the File menu and selecting "Save as video". This will prompt you to choose a filename and will then 
+convert your play into a video returning to the application when it has finished.</p>
+
+<h2>License</h2>
+
+<p>(The MIT License)</p>
+
+<p>Copyright (c) 2012 David Tyler &lt;<a href="mailto:davet.code@gmail.com">davet.code@gmail.com</a>&gt;</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/DaveTCode">David Tyler</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </body>
 </html>

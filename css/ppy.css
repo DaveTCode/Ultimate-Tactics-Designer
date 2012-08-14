@@ -1,0 +1,154 @@
+.ppy-placeholder {
+    position:       relative;
+}
+.ppy-imglist {
+    width:          100%;
+    display:        block;
+    overflow:       hidden;
+    
+}
+.ppy-imglist li {
+    padding:        10px;
+    border:         1px solid #f0f0f0;
+    border-radius:          5px;
+    -moz-border-radius:     5px;
+    -khtml-border-radius:   5px;
+    -webkit-border-radius:  5px;
+    background:     #fff;
+    list-style:     none;
+    float:          left;
+    display:        block;
+    margin:         0 10px 10px 0;
+}
+.ppy-imglist li a img {
+    display:        block;
+    border:         0;
+}
+#overviewImage .ppy-extcaption {
+    width:          240px;
+    display:        block;
+}
+#overviewImage .ppy-imglist li {
+    width:          240px;
+    height:         270px;
+}
+
+#overviewImage.ppy-active {
+    width:          262px;
+    float:          left;
+    margin:         0 20px 10px 0;
+}
+
+#overviewImage .ppy-outer {
+    padding:        10px;
+    border:         1px solid #e1f1a1;
+    border-radius:          0 10px 10px 10px;
+    -moz-border-radius:     0 10px 10px 10px;
+    -webkit-border-radius:  0 10px 10px 10px;
+    background:     #eff9c7;
+}
+
+#overviewImage .ppy-stage {
+    width:          550px;
+    height:         335px;
+    border-radius:          0 5px 5px 5px;
+    -moz-border-radius:     0 5px 5px 5px;
+    -webkit-border-radius:  0 5px 5px 5px;
+    cursor:         pointer;
+}
+
+#overviewImage .ppy-outer:hover,
+#overviewImage.ppy-expanded .ppy-outer {
+    border:         1px solid #d5e68e;
+    box-shadow:         0 0 7px #ccc;
+    -moz-box-shadow:    0 0 7px #ccc;
+    -webkit-box-shadow: 0 0 7px #ccc;
+}
+
+#overviewImage .ppy-caption {
+    margin:         5px 0 0 0;
+    padding:        10px;
+    font-size:      0.9em;
+    line-height:    1.3em;
+    color:          #809f21;
+    background:     #eeffa8;
+    border-radius:          10px;
+    -moz-border-radius:     10px;
+    -webkit-border-radius:  10px;
+    box-shadow:         0 0 7px #ccc;
+    -moz-box-shadow:    0 0 7px #ccc;
+    -webkit-box-shadow: 0 0 7px #ccc;
+    visibility:         hidden; /* prevent flash of content before popeye loads */
+}
+
+#overviewImage .ppy-caption a {
+    color:          #66bde9;
+}
+#overviewImage .ppy-caption a:hover {
+    text-decoration:underline;
+}
+
+#overviewImage .ppy-counter {
+    border-bottom:  1px solid #d5e68e;
+    color:          #b8cf5a;
+    padding:        0 0 2px 0;
+    margin:         0 0 5px 0;
+    font-size:      0.9em;
+}
+
+#overviewImage .ppy-stagewrap {
+    background:     #0c3b3d;
+    border-radius:          0 5px 5px 5px;
+    -moz-border-radius:     0 5px 5px 5px;
+    -webkit-border-radius:  0 5px 5px 5px;
+}
+
+#overviewImage .ppy-loading {
+    background:     #0c3b3d url(../images/popeye/loading1.gif) no-repeat center !important;
+}
+
+#overviewImage .ppy-nav {
+    background:     #0c3b3d;
+    background:     -moz-linear-gradient(
+        center bottom,
+        rgb(12,59,61) 0%,
+        rgb(58,131,133) 100%
+    );
+    width:          104px;
+    height:         32px;
+    padding:        5px;
+    position:       absolute;
+    top:            0;
+    left:           0;  
+    border-radius:          0 0 5px 5px;
+    -moz-border-radius:     0 0 5px 5px;
+    -webkit-border-radius:  0 0 5px 5px;   
+}
+
+#overviewImage .ppy-nav a {
+    display:        block;
+    overflow:       hidden;
+    text-indent:    -900em;
+    height:         22px;
+    float:          left;
+    padding:        5px;
+    border-radius:          5px;
+    -moz-border-radius:     5px;
+    -khtml-border-radius:   5px;
+    -webkit-border-radius:  5px; 
+}
+
+#overviewImage .ppy-switch-enlarge {
+    width:          30px;
+    background:     url(../images/popeye/enlarge3.png) no-repeat center;
+}
+
+#overviewImage .ppy-switch-compact {
+    width:          30px;
+    background:     url(../images/popeye/compact3.png) no-repeat center;
+}
+
+#overviewImage .ppy-nav a:hover {
+    background-color:   #a1c436;
+    cursor:         pointer;
+}
