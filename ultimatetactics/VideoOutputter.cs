@@ -130,17 +130,18 @@ namespace UltimateTacticsDesigner
     {
       int videoWidth = (int) (Settings.Default.PitchLength * 10.0f);
       int videoHeight = (int) (Settings.Default.PitchWidth * 10.0f);
+      String imageDirectory = GetTempDirectory();
 
       mCallback.SetText("Starting conversion to images");
-      ModelToImageFiles(GetTempDirectory());
+      ModelToImageFiles(imageDirectory);
       mCallback.SetText("Completed conversion to images");
 
       System.Diagnostics.Process ffmpegProcess = new System.Diagnostics.Process();
       ffmpegProcess.StartInfo.FileName = "ffmpeg";
-      ffmpegProcess.StartInfo.Arguments = "-f image2 -i temp_images" + 
-        Path.DirectorySeparatorChar + "image%06d.jpg -y -r 60 -s " + 
+      ffmpegProcess.StartInfo.Arguments = "-f image2 -i \"" + imageDirectory +
+        Path.DirectorySeparatorChar + "image%06d.jpg\" -y -r 60 -s " + 
         videoWidth.ToString(CultureInfo.InvariantCulture) + "x" + 
-        videoHeight.ToString(CultureInfo.InvariantCulture) + " " + mVideoFile;
+        videoHeight.ToString(CultureInfo.InvariantCulture) + " \"" + mVideoFile + "\"";
 
       ffmpegProcess.Start();
       ffmpegProcess.WaitForExit();
