@@ -131,15 +131,8 @@ namespace UltimateTacticsDesigner
       int videoWidth = (int) (Settings.Default.PitchLength * 10.0f);
       int videoHeight = (int) (Settings.Default.PitchWidth * 10.0f);
 
-      if (Directory.Exists("temp_images"))
-      {
-        DirectoryInfo di = new DirectoryInfo("temp_images");
-        di.Delete(true);
-      }
-      Directory.CreateDirectory("temp_images");
-
       mCallback.SetText("Starting conversion to images");
-      ModelToImageFiles("temp_images");
+      ModelToImageFiles(GetTempDirectory());
       mCallback.SetText("Completed conversion to images");
 
       System.Diagnostics.Process ffmpegProcess = new System.Diagnostics.Process();
@@ -151,6 +144,28 @@ namespace UltimateTacticsDesigner
 
       ffmpegProcess.Start();
       ffmpegProcess.WaitForExit();
+    }
+
+    /// <summary>
+    /// Create a temporary directory in the current users temp folder.
+    /// 
+    /// We can use this to fill with images for turning into a video.
+    /// </summary>
+    /// <returns>The directory to use as a string. Guaranteed to have 
+    /// been created</returns>
+    private String GetTempDirectory()
+    {
+      String tempPath = Path.GetTempPath();
+      String tempDir = Path.Combine(tempPath, "playbook_temp_images");
+
+      if (Directory.Exists(tempDir))
+      {
+        DirectoryInfo di = new DirectoryInfo(tempDir);
+        di.Delete(true);
+      }
+      Directory.CreateDirectory(tempDir);
+
+      return tempDir;
     }
   }
 }
