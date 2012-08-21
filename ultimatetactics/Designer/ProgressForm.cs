@@ -77,6 +77,7 @@ namespace UltimateTactics.Designer
     /// <param name="text">The progress text to display</param>
     public void SetText(String text)
     {
+      mInitEvent.WaitOne();
       Invoke(new SetTextInvoker(DoSetText), new object[] { text });
     }
 
@@ -212,7 +213,14 @@ namespace UltimateTactics.Designer
     /// </summary>
     private void UpdateStatusText()
     {
-      Text = mTitleRoot + String.Format(" - {0}% complete", (mProgressBar.Value * 100) / (mProgressBar.Maximum - mProgressBar.Minimum));
+      if (mProgressBar.Maximum - mProgressBar.Minimum == 0)
+      {
+        Text = mTitleRoot + "Complete";
+      }
+      else
+      {
+        Text = mTitleRoot + String.Format(" - {0}% complete", (mProgressBar.Value * 100) / (mProgressBar.Maximum - mProgressBar.Minimum));
+      }
     }
 
     /// <summary>
