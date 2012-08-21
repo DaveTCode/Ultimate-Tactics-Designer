@@ -6,11 +6,11 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using UltimateTacticsDesigner.DataModel;
-using UltimateTacticsDesigner.Renderer;
-using UltimateTacticsDesigner.Properties;
+using Playbook.DataModel;
+using Playbook.Renderer;
+using Playbook.Properties;
 
-namespace UltimateTacticsDesigner.Designer
+namespace Playbook.Designer
 {
   public partial class FrameCollection : UserControl
   {

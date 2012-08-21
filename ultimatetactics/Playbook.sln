@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playbook", "Playbook.csproj", "{A92F4D6C-D450-4275-9346-CE9B6CAF42C7}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TacticsDesignerSetup", "..\TacticsDesignerSetup\TacticsDesignerSetup.vdproj", "{5681D628-E31D-4A5F-B369-82B15C3F9AC8}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PlaybookSetup", "..\PlaybookSetup\PlaybookSetup.vdproj", "{287C72B3-2AE3-4D34-B883-161FA2B47CDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +15,8 @@ Global
 		{A92F4D6C-D450-4275-9346-CE9B6CAF42C7}.Debug|x86.Build.0 = Debug|x86
 		{A92F4D6C-D450-4275-9346-CE9B6CAF42C7}.Release|x86.ActiveCfg = Release|x86
 		{A92F4D6C-D450-4275-9346-CE9B6CAF42C7}.Release|x86.Build.0 = Release|x86
-		{5681D628-E31D-4A5F-B369-82B15C3F9AC8}.Debug|x86.ActiveCfg = Debug
-		{5681D628-E31D-4A5F-B369-82B15C3F9AC8}.Release|x86.ActiveCfg = Release
-		{5681D628-E31D-4A5F-B369-82B15C3F9AC8}.Release|x86.Build.0 = Release
+		{287C72B3-2AE3-4D34-B883-161FA2B47CDB}.Debug|x86.ActiveCfg = Debug
+		{287C72B3-2AE3-4D34-B883-161FA2B47CDB}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UltimateTacticsDesigner.DataModel;
-using UltimateTacticsDesigner.Renderer;
-using UltimateTacticsDesigner.Properties;
+using Playbook.DataModel;
+using Playbook.Renderer;
+using Playbook.Properties;
 using System.Drawing;
 using Splicer;
 using Splicer.Timeline;
@@ -13,8 +13,9 @@ using Splicer.WindowsMedia;
 using System.IO;
 using System.Globalization;
 using UltimateTactics.Designer;
+using System.Windows.Forms;
 
-namespace UltimateTacticsDesigner
+namespace Playbook
 {
     /// <summary>
     /// The video outputter is used to convert a play model into a video file.
@@ -72,53 +73,50 @@ namespace UltimateTacticsDesigner
       mCallback.Begin(0, mModel.CycleCount / 4);
 
       Color backColor = Color.FromArgb(40, 40, 40);
-      FrameRenderer renderer = new FrameRenderer(backColor,
-                                                 Settings.Default.PitchColor,
-                                                 Settings.Default.LineColor);
-
-      using (Bitmap bitmap = new Bitmap((int)(Settings.Default.PitchLength * 10.0f),
-                                        (int)(Settings.Default.PitchWidth * 10.0f)))
+      using (FrameRenderer renderer = new FrameRenderer(backColor, Settings.Default.PitchColor, Settings.Default.LineColor))
       {
-        using (Graphics graphics = Graphics.FromImage(bitmap))
+        using (Bitmap bitmap = new Bitmap((int)(Settings.Default.PitchLength * 10.0f),
+                                          (int)(Settings.Default.PitchWidth * 10.0f)))
         {
-          int imageIndex = 0;
-          FramePlayData fpd;
-          foreach (PlayFrame frame in mModel.GetAllFrames())
+          using (Graphics graphics = Graphics.FromImage(bitmap))
           {
-            fpd = frame.GenerateViewingData();
-
-            // I made a cop out decision to allow for slow speed playback by 
-            // creating 4 times as many cycles as needed. Here though we want 
-            // to keep the output format as small as possible so only 1 in every
-            // 4 frames is displayed.
-            //
-            // Frankly, this is terrible and will definitely bite me later on.
-            int ii = 0;
-            foreach (List<ItemPlayData> cycleData in fpd.PlayData)
+            int imageIndex = 0;
+            FramePlayData fpd;
+            foreach (PlayFrame frame in mModel.GetAllFrames())
             {
-              ii++;
-              if (ii % 4 != 0 && cycleData != fpd.PlayData.Last()) continue; // Thusly do I cry.
-              PitchScreenCoordConverter converter = new PitchScreenCoordConverter(graphics);
+              fpd = frame.GenerateViewingData();
 
-              graphics.Clear(backColor);
-              renderer.DrawPitch(graphics, converter);
-
-              foreach (ItemPlayData itemPlayData in cycleData)
+              // I made a cop out decision to allow for slow speed playback by 
+              // creating 4 times as many cycles as needed. Here though we want 
+              // to keep the output format as small as possible so only 1 in every
+              // 4 frames is displayed.
+              //
+              // Frankly, this is terrible and will definitely bite me later on.
+              int ii = 0;
+              foreach (List<ItemPlayData> cycleData in fpd.PlayData)
               {
-                itemPlayData.Render(graphics, renderer, converter);
+                ii++;
+                if (ii % 4 != 0 && cycleData != fpd.PlayData.Last()) continue; // Thusly do I cry.
+                PitchScreenCoordConverter converter = new PitchScreenCoordConverter(graphics);
+
+                graphics.Clear(backColor);
+                renderer.DrawPitch(graphics, converter);
+
+                foreach (ItemPlayData itemPlayData in cycleData)
+                {
+                  itemPlayData.Render(graphics, renderer, converter);
+                }
+
+                imageIndex++;
+                BitmapExtensions.SaveJpg100(bitmap, outputDir + Path.DirectorySeparatorChar + "image" +
+                  imageIndex.ToString("D6", CultureInfo.InvariantCulture) + ".jpg");
+
+                mCallback.Increment(1);
               }
-
-              imageIndex++;
-              BitmapExtensions.SaveJpg100(bitmap, outputDir + Path.DirectorySeparatorChar + "image" + 
-                imageIndex.ToString("D6", CultureInfo.InvariantCulture) + ".jpg");
-
-              mCallback.Increment(1);
             }
           }
         }
       }
-
-      renderer.Dispose();
     }
 
     /// <summary>
@@ -137,7 +135,7 @@ namespace UltimateTacticsDesigner
       mCallback.SetText("Completed conversion to images");
 
       System.Diagnostics.Process ffmpegProcess = new System.Diagnostics.Process();
-      ffmpegProcess.StartInfo.FileName = "ffmpeg";
+      ffmpegProcess.StartInfo.FileName = Directory.GetParent(Application.ExecutablePath) + "/ffmpeg";
       ffmpegProcess.StartInfo.Arguments = "-f image2 -i \"" + imageDirectory +
         Path.DirectorySeparatorChar + "image%06d.jpg\" -y -r 60 -s " + 
         videoWidth.ToString(CultureInfo.InvariantCulture) + "x" + 

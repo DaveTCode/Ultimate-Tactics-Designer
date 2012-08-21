@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="UltimateTacticsDesigner.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Playbook.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="PitchWidth" Type="System.Single" Scope="Application">
@@ -45,13 +45,13 @@
       <Value Profile="(Default)">White</Value>
     </Setting>
     <Setting Name="Version" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">1.1.0</Value>
+      <Value Profile="(Default)">1.1.6</Value>
     </Setting>
     <Setting Name="VersionServer" Type="System.String" Scope="Application">
       <Value Profile="(Default)">http://DaveTCode.github.com/Ultimate-Tactics-Designer/version.txt</Value>
     </Setting>
     <Setting Name="UsersVersion" Type="System.String" Scope="User">
-      <Value Profile="(Default)">1.1.0</Value>
+      <Value Profile="(Default)">1.1.6</Value>
     </Setting>
     <Setting Name="ShowUpgradeDialog" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>

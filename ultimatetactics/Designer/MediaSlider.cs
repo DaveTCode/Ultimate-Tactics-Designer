@@ -11,7 +11,7 @@ using System.Drawing.Imaging;
 using System.Drawing.Drawing2D;
 using System.Timers;
 
-namespace UltimateTacticsDesigner.Designer
+namespace Playbook.Designer
 {
   /// <summary>
   /// Class taken from http://www.codeproject.com/KB/progress/MediaSlider.aspx

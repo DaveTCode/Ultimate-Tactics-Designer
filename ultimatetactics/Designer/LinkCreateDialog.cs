@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace UltimateTacticsDesigner.Designer
+namespace Playbook.Designer
 {
   public partial class LinkCreateDialog : Form
   {

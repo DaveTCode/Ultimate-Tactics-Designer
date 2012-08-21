@@ -8,8 +8,8 @@
     <ProjectGuid>{A92F4D6C-D450-4275-9346-CE9B6CAF42C7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UltimateTacticsDesigner</RootNamespace>
-    <AssemblyName>UltimateTacticsDesigner</AssemblyName>
+    <RootNamespace>Playbook</RootNamespace>
+    <AssemblyName>Playbook</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -51,7 +51,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>UltimateTacticsDesigner.Program</StartupObject>
+    <StartupObject>Playbook.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>playbook-icon.ico</ApplicationIcon>

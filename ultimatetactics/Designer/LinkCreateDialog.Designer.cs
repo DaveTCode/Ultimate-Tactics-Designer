@@ -1,4 +1,4 @@
-﻿namespace UltimateTacticsDesigner.Designer
+﻿namespace Playbook.Designer
 {
   partial class LinkCreateDialog
   {

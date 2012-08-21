@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UltimateTacticsDesigner.DataModel;
+using Playbook.DataModel;
 using System.Drawing;
 
-namespace UltimateTacticsDesigner.Designer
+namespace Playbook.Designer
 {
   class VisualOverlay
   {

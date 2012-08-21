@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml;
-using UltimateTacticsDesigner.Renderer;
+using Playbook.Renderer;
 using System.Globalization;
 
-namespace UltimateTacticsDesigner.DataModel
+namespace Playbook.DataModel
 {
   /// <summary>
   /// The different types of item which we can output to the xml doc.

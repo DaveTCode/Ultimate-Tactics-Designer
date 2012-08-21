@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 
-namespace UltimateTacticsDesigner.DataModel
+namespace Playbook.DataModel
 {
   /// <summary>
   /// A linear movement used to describe the movement of a player or the disc

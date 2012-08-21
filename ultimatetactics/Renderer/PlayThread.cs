@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Drawing;
-using UltimateTacticsDesigner.DataModel;
-using UltimateTacticsDesigner.Designer;
+using Playbook.DataModel;
+using Playbook.Designer;
 using System.Windows.Forms;
-using UltimateTacticsDesigner.Properties;
+using Playbook.Properties;
 
-namespace UltimateTacticsDesigner.Renderer
+namespace Playbook.Renderer
 {
   enum PlayThreadState
   {

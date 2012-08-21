@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UltimateTacticsDesigner.DataModel;
+using Playbook.DataModel;
 
-namespace UltimateTacticsDesigner.Designer
+namespace Playbook.Designer
 {
   [Serializable]
   class ModelHistoryItem

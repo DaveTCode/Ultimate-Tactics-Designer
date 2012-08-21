@@ -9,13 +9,13 @@ using System.Windows.Forms;
 using System.Threading;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using UltimateTacticsDesigner.DataModel;
-using UltimateTacticsDesigner.Renderer;
-using UltimateTacticsDesigner;
-using UltimateTacticsDesigner.Properties;
+using Playbook.DataModel;
+using Playbook.Renderer;
+using Playbook;
+using Playbook.Properties;
 using UltimateTactics.Designer;
 
-namespace UltimateTacticsDesigner.Designer
+namespace Playbook.Designer
 {
   public partial class MainDesignerForm : Form
   {

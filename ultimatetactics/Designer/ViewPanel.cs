@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
-using UltimateTacticsDesigner.DataModel;
-using UltimateTacticsDesigner.Renderer;
-using UltimateTacticsDesigner.Properties;
+using Playbook.DataModel;
+using Playbook.Renderer;
+using Playbook.Properties;
 
-namespace UltimateTacticsDesigner.Designer
+namespace Playbook.Designer
 {
   /// <summary>
   /// The ViewPanel is where the design is displayed and also where the design 
@@ -166,7 +166,7 @@ namespace UltimateTacticsDesigner.Designer
             // Click -> Move item
             if (KeyPressHandler.IsKeyPressed(Keys.ControlKey))
             {
-              if (CurrentFrame.CanDrawCut(pitchCoords, Settings.Default.PlayerDiameter, 0.0f))
+              if (CurrentFrame.CanDrawCut(pitchCoords, Settings.Default.PlayerDiameter, -1.0f))
               {
                 CurrentTool = new PlaceCutTool(null);
               }

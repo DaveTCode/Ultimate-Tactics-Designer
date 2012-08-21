@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace UltimateTacticsDesigner.DataModel
+namespace Playbook.DataModel
 {
   /// <summary>
   /// A PlayModel is used to represent an entire play simulation. This is the 

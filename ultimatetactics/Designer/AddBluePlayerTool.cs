@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
-using UltimateTacticsDesigner.DataModel;
-using UltimateTacticsDesigner.Properties;
-using UltimateTacticsDesigner.Renderer;
+using Playbook.DataModel;
+using Playbook.Properties;
+using Playbook.Renderer;
 
-namespace UltimateTacticsDesigner.Designer
+namespace Playbook.Designer
 {
   class AddBluePlayerTool : Tool
   {

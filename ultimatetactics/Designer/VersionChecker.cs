@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Net;
 using System.IO;
-using UltimateTacticsDesigner.Properties;
+using Playbook.Properties;
 using System.Windows.Forms;
 using System.Threading;
 
-namespace UltimateTacticsDesigner.Designer
+namespace Playbook.Designer
 {
   class VersionChecker
   {

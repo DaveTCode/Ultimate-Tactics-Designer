@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace UltimateTacticsDesigner.Designer
+namespace Playbook.Designer
 {
   /// <summary>
   /// A dialog that can be used to input the speed of something between

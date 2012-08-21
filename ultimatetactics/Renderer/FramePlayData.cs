@@ -5,7 +5,7 @@ using System.Text;
 using System.Drawing;
 using System.Globalization;
 
-namespace UltimateTacticsDesigner.Renderer
+namespace Playbook.Renderer
 {
 
   [Serializable]
@@ -19,11 +19,11 @@ namespace UltimateTacticsDesigner.Renderer
   abstract class ItemPlayData
   {
     public PointF ItemLocation { get; set; }
-    public UltimateTacticsDesigner.DataModel.PlayViewType ViewType { get; set; }
+    public Playbook.DataModel.PlayViewType ViewType { get; set; }
     public Dictionary<String, String> ItemProperties { get; set; }
 
     public ItemPlayData(PointF position, 
-                        UltimateTacticsDesigner.DataModel.PlayViewType viewType)
+                        Playbook.DataModel.PlayViewType viewType)
     {
       ItemLocation = position;
       ViewType = viewType;
@@ -51,7 +51,7 @@ namespace UltimateTacticsDesigner.Renderer
                           Image sprite, 
                           float width, 
                           float height,
-                          UltimateTacticsDesigner.DataModel.PlayViewType viewType)
+                          Playbook.DataModel.PlayViewType viewType)
       : base(position, viewType)
     {
       mSprite = sprite;
@@ -87,12 +87,12 @@ namespace UltimateTacticsDesigner.Renderer
                           float height,
                           int id,
                           String name,
-                          UltimateTacticsDesigner.DataModel.Team team)
+                          Playbook.DataModel.Team team)
       : base(position, 
              sprite,
              width,
              height,
-             UltimateTacticsDesigner.DataModel.PlayViewType.Player)
+             Playbook.DataModel.PlayViewType.Player)
     {
       base.ItemProperties.Add("id", id.ToString(CultureInfo.InvariantCulture));
       base.ItemProperties.Add("team", team.UniqueId.ToString(CultureInfo.InvariantCulture));

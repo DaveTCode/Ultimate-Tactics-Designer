@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 
-namespace UltimateTacticsDesigner
+namespace Playbook
 {
   /// <summary>
   /// Provides useful geometric functions as public static functions which

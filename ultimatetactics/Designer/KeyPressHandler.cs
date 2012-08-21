@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace UltimateTacticsDesigner.Designer
+namespace Playbook.Designer
 {
   /// <summary>
   /// The KeyPressHandler does application level key handling.

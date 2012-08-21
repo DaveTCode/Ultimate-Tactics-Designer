@@ -6,7 +6,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.IO;
 
-namespace UltimateTacticsDesigner
+namespace Playbook
 {
   /// <summary>
   /// Reference Article http://www.codeproject.com/KB/tips/SerializedObjectCloner.aspx

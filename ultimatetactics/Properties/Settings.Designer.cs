@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UltimateTacticsDesigner.Properties {
+namespace Playbook.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -151,7 +151,7 @@ namespace UltimateTacticsDesigner.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1.1.0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1.1.6")]
         public string Version {
             get {
                 return ((string)(this["Version"]));
@@ -169,7 +169,7 @@ namespace UltimateTacticsDesigner.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1.1.0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1.1.6")]
         public string UsersVersion {
             get {
                 return ((string)(this["UsersVersion"]));

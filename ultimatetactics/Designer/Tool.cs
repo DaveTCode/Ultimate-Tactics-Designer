@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
-using UltimateTacticsDesigner.DataModel;
-using UltimateTacticsDesigner.Renderer;
+using Playbook.DataModel;
+using Playbook.Renderer;
 
-namespace UltimateTacticsDesigner.Designer
+namespace Playbook.Designer
 {
   abstract class Tool
   {

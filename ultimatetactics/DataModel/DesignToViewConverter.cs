@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UltimateTacticsDesigner.Renderer;
+using Playbook.Renderer;
 using System.Drawing;
-using UltimateTacticsDesigner.Properties;
+using Playbook.Properties;
 using System.Globalization;
 
-namespace UltimateTacticsDesigner.DataModel
+namespace Playbook.DataModel
 {
   class DesignToViewConverter
   {
@@ -90,7 +90,7 @@ namespace UltimateTacticsDesigner.DataModel
 
       if (!(mDiscFrameMovement.Thrower == null))
       {
-        Bitmap disc = UltimateTacticsDesigner.Properties.Resources.disc;
+        Bitmap disc = Playbook.Properties.Resources.disc;
         float halfPlayerDiameter = Settings.Default.PlayerDiameter / 2.0f;
 
         PointF curr = mDiscFrameMovement.StartPosition();

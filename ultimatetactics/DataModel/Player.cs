@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UltimateTacticsDesigner;
+using Playbook;
 using System.ComponentModel;
 
-namespace UltimateTacticsDesigner.DataModel
+namespace Playbook.DataModel
 {
   /// <summary>
   /// Used to contain any details unique to each player on the field.

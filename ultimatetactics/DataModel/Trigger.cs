@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 
-namespace UltimateTacticsDesigner.DataModel
+namespace Playbook.DataModel
 {
   /// <summary>
   /// Triggers are placed on cuts to indicate that another player should start

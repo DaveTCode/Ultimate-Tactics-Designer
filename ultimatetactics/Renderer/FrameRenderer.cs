@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
-using UltimateTacticsDesigner.DataModel;
-using UltimateTacticsDesigner.Designer;
-using UltimateTacticsDesigner.Properties;
+using Playbook.DataModel;
+using Playbook.Designer;
+using Playbook.Properties;
 using System.Globalization;
 
-namespace UltimateTacticsDesigner.Renderer
+namespace Playbook.Renderer
 {
   /// <summary>
   /// Draws the design view of a frame.
@@ -283,7 +283,7 @@ namespace UltimateTacticsDesigner.Renderer
 
       DrawSprite(display, 
                  converter, 
-                 UltimateTacticsDesigner.Properties.Resources.disc,
+                 Playbook.Properties.Resources.disc,
                  offsetCentre,
                  Settings.Default.PlayerDiameter / 2.0f,
                  Settings.Default.PlayerDiameter / 2.0f);

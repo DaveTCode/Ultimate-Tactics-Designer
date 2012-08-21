@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 
-namespace UltimateTacticsDesigner
+namespace Playbook
 {
   /// <summary>
   /// Taken from stackoverflow as a method for encoding bmp as jpg with high 

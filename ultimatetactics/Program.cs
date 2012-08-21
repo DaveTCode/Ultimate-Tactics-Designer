@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using UltimateTacticsDesigner.Designer;
-using UltimateTacticsDesigner.Properties;
+using Playbook.Designer;
+using Playbook.Properties;
 
-namespace UltimateTacticsDesigner
+namespace Playbook
 {
   static class Program
   {
@@ -19,6 +19,7 @@ namespace UltimateTacticsDesigner
       {
         Settings.Default.ShowUpgradeDialog = true;
         Settings.Default.UsersVersion = Settings.Default.Version;
+        Settings.Default.Save();
       }
 
       Application.EnableVisualStyles();

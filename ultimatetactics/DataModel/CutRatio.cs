@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 
-namespace UltimateTacticsDesigner.DataModel
+namespace Playbook.DataModel
 {
   [Serializable()]
   class CutRatio

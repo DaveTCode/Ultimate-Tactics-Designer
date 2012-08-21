@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
-using UltimateTacticsDesigner.Properties;
+using Playbook.Properties;
 
-namespace UltimateTacticsDesigner.DataModel
+namespace Playbook.DataModel
 {
   [Serializable()]
   class Team

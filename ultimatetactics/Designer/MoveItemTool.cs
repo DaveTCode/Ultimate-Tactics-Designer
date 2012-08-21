@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
-using UltimateTacticsDesigner.DataModel;
-using UltimateTacticsDesigner.Renderer;
+using Playbook.DataModel;
+using Playbook.Renderer;
 using System.Windows.Forms;
 
-namespace UltimateTacticsDesigner.Designer
+namespace Playbook.Designer
 {
   class MoveItemTool : Tool
   {

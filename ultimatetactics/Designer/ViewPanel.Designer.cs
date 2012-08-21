@@ -1,7 +1,7 @@
-﻿using UltimateTacticsDesigner.DataModel;
-using UltimateTacticsDesigner.Renderer;
+﻿using Playbook.DataModel;
+using Playbook.Renderer;
 
-namespace UltimateTacticsDesigner.Designer
+namespace Playbook.Designer
 {
   partial class ViewPanel
   {

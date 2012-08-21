@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using UltimateTacticsDesigner.Properties;
+using Playbook.Properties;
 
-namespace UltimateTacticsDesigner.Designer
+namespace Playbook.Designer
 {
   public partial class VersionUpgradeForm : Form
   {
@@ -24,6 +24,7 @@ namespace UltimateTacticsDesigner.Designer
       if (neverShowAgain)
       {
         Settings.Default.ShowUpgradeDialog = false;
+        Settings.Default.Save();
       }
     }
 

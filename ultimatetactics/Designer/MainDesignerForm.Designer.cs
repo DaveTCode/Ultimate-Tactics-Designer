@@ -1,6 +1,6 @@
-﻿using UltimateTacticsDesigner.DataModel;
+﻿using Playbook.DataModel;
 using System.Drawing;
-namespace UltimateTacticsDesigner.Designer
+namespace Playbook.Designer
 {
   partial class MainDesignerForm
   {
@@ -46,19 +46,19 @@ namespace UltimateTacticsDesigner.Designer
         this.redTeamTooltip = new System.Windows.Forms.ToolTip(this.components);
         this.redTeamTool = new System.Windows.Forms.PictureBox();
         this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-        this.viewPanel = new UltimateTacticsDesigner.Designer.ViewPanel(this.components);
+        this.viewPanel = new Playbook.Designer.ViewPanel(this.components);
         this.toolBoxPanel = new System.Windows.Forms.Panel();
         this.discToolPictureBox = new System.Windows.Forms.PictureBox();
         this.blueTeamTool = new System.Windows.Forms.PictureBox();
         this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
         this.playButton = new System.Windows.Forms.Button();
         this.playPauseButtonImageList = new System.Windows.Forms.ImageList(this.components);
-        this.viewTrackBar = new UltimateTacticsDesigner.Designer.MediaSlider();
+        this.viewTrackBar = new Playbook.Designer.MediaSlider();
         this.playSpeedCombo = new System.Windows.Forms.ComboBox();
         this.stopButton = new System.Windows.Forms.Button();
         this.stopButtonImageList = new System.Windows.Forms.ImageList(this.components);
         this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-        this.frameCollection = new UltimateTacticsDesigner.Designer.FrameCollection();
+        this.frameCollection = new Playbook.Designer.FrameCollection();
         this.leftScrollButton = new System.Windows.Forms.Button();
         this.rightScrollButton = new System.Windows.Forms.Button();
         this.discToolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -168,7 +168,7 @@ namespace UltimateTacticsDesigner.Designer
         // 
         // redTeamTool
         // 
-        this.redTeamTool.Image = global::UltimateTacticsDesigner.Properties.Resources.red_team;
+        this.redTeamTool.Image = global::Playbook.Properties.Resources.red_team;
         this.redTeamTool.Location = new System.Drawing.Point(3, 3);
         this.redTeamTool.Name = "redTeamTool";
         this.redTeamTool.Size = new System.Drawing.Size(20, 20);
@@ -226,7 +226,7 @@ namespace UltimateTacticsDesigner.Designer
         // 
         // discToolPictureBox
         // 
-        this.discToolPictureBox.Image = global::UltimateTacticsDesigner.Properties.Resources.disc;
+        this.discToolPictureBox.Image = global::Playbook.Properties.Resources.disc;
         this.discToolPictureBox.Location = new System.Drawing.Point(42, 3);
         this.discToolPictureBox.Name = "discToolPictureBox";
         this.discToolPictureBox.Size = new System.Drawing.Size(22, 20);
@@ -238,7 +238,7 @@ namespace UltimateTacticsDesigner.Designer
         // 
         // blueTeamTool
         // 
-        this.blueTeamTool.Image = global::UltimateTacticsDesigner.Properties.Resources.blue_team;
+        this.blueTeamTool.Image = global::Playbook.Properties.Resources.blue_team;
         this.blueTeamTool.Location = new System.Drawing.Point(81, 3);
         this.blueTeamTool.Name = "blueTeamTool";
         this.blueTeamTool.Size = new System.Drawing.Size(20, 20);
@@ -303,7 +303,7 @@ namespace UltimateTacticsDesigner.Designer
                     | System.Windows.Forms.AnchorStyles.Right)));
         this.viewTrackBar.Animated = false;
         this.viewTrackBar.AnimationSize = 0.2F;
-        this.viewTrackBar.AnimationSpeed = UltimateTacticsDesigner.Designer.MediaSlider.AnimateSpeed.Normal;
+        this.viewTrackBar.AnimationSpeed = Playbook.Designer.MediaSlider.AnimateSpeed.Normal;
         this.viewTrackBar.AutoScrollMargin = new System.Drawing.Size(0, 0);
         this.viewTrackBar.AutoScrollMinSize = new System.Drawing.Size(0, 0);
         this.viewTrackBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -313,7 +313,7 @@ namespace UltimateTacticsDesigner.Designer
         this.viewTrackBar.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
         this.viewTrackBar.ButtonCornerRadius = ((uint)(4u));
         this.viewTrackBar.ButtonSize = new System.Drawing.Size(12, 12);
-        this.viewTrackBar.ButtonStyle = UltimateTacticsDesigner.Designer.MediaSlider.ButtonType.Round;
+        this.viewTrackBar.ButtonStyle = Playbook.Designer.MediaSlider.ButtonType.Round;
         this.viewTrackBar.ContextMenuStrip = null;
         this.viewTrackBar.Enabled = false;
         this.viewTrackBar.LargeChange = 2;
@@ -325,21 +325,21 @@ namespace UltimateTacticsDesigner.Designer
         this.viewTrackBar.Orientation = System.Windows.Forms.Orientation.Horizontal;
         this.viewTrackBar.ShowButtonOnHover = false;
         this.viewTrackBar.Size = new System.Drawing.Size(508, 29);
-        this.viewTrackBar.SliderFlyOut = UltimateTacticsDesigner.Designer.MediaSlider.FlyOutStyle.None;
+        this.viewTrackBar.SliderFlyOut = Playbook.Designer.MediaSlider.FlyOutStyle.None;
         this.viewTrackBar.SmallChange = 1;
         this.viewTrackBar.SmoothScrolling = false;
         this.viewTrackBar.TabIndex = 2;
         this.viewTrackBar.TabStop = false;
         this.viewTrackBar.TickColor = System.Drawing.Color.DarkGray;
         this.viewTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-        this.viewTrackBar.TickType = UltimateTacticsDesigner.Designer.MediaSlider.TickMode.Standard;
+        this.viewTrackBar.TickType = Playbook.Designer.MediaSlider.TickMode.Standard;
         this.viewTrackBar.TrackBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
         this.viewTrackBar.TrackDepth = 4;
         this.viewTrackBar.TrackFillColor = System.Drawing.Color.Transparent;
         this.viewTrackBar.TrackProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(101)))), ((int)(((byte)(188)))));
         this.viewTrackBar.TrackShadow = false;
         this.viewTrackBar.TrackShadowColor = System.Drawing.Color.DarkGray;
-        this.viewTrackBar.TrackStyle = UltimateTacticsDesigner.Designer.MediaSlider.TrackType.Value;
+        this.viewTrackBar.TrackStyle = Playbook.Designer.MediaSlider.TrackType.Value;
         this.viewTrackBar.Value = 0;
         this.viewTrackBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.viewTrackBar_Scroll);
         // 
@@ -425,7 +425,7 @@ namespace UltimateTacticsDesigner.Designer
         this.leftScrollButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                     | System.Windows.Forms.AnchorStyles.Left)
                     | System.Windows.Forms.AnchorStyles.Right)));
-        this.leftScrollButton.BackgroundImage = global::UltimateTacticsDesigner.Properties.Resources.left_scroll;
+        this.leftScrollButton.BackgroundImage = global::Playbook.Properties.Resources.left_scroll;
         this.leftScrollButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
         this.leftScrollButton.Cursor = System.Windows.Forms.Cursors.PanWest;
         this.leftScrollButton.FlatAppearance.BorderSize = 0;
@@ -443,7 +443,7 @@ namespace UltimateTacticsDesigner.Designer
         this.rightScrollButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                     | System.Windows.Forms.AnchorStyles.Left)
                     | System.Windows.Forms.AnchorStyles.Right)));
-        this.rightScrollButton.BackgroundImage = global::UltimateTacticsDesigner.Properties.Resources.right_scroll;
+        this.rightScrollButton.BackgroundImage = global::Playbook.Properties.Resources.right_scroll;
         this.rightScrollButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
         this.rightScrollButton.Cursor = System.Windows.Forms.Cursors.PanEast;
         this.rightScrollButton.FlatAppearance.BorderSize = 0;
