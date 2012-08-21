@@ -36,12 +36,14 @@
       // newVersionLink
       // 
       this.newVersionLink.AutoSize = true;
+      this.newVersionLink.Cursor = System.Windows.Forms.Cursors.Hand;
       this.newVersionLink.Location = new System.Drawing.Point(13, 9);
       this.newVersionLink.Name = "newVersionLink";
       this.newVersionLink.Size = new System.Drawing.Size(115, 13);
       this.newVersionLink.TabIndex = 0;
       this.newVersionLink.TabStop = true;
       this.newVersionLink.Text = "Download new version";
+      this.newVersionLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.newVersionLink_LinkClicked);
       // 
       // doNotShowCheckbox
       // 
@@ -55,6 +57,7 @@
       // 
       // OkButton
       // 
+      this.OkButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
       this.OkButton.Location = new System.Drawing.Point(197, 42);
       this.OkButton.Name = "OkButton";
       this.OkButton.Size = new System.Drawing.Size(75, 23);
@@ -65,9 +68,10 @@
       // 
       // VersionUpgradeForm
       // 
-      this.AcceptButton = this.OkButton;
+      this.AcceptButton = this.newVersionLink;
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.CancelButton = this.OkButton;
       this.ClientSize = new System.Drawing.Size(284, 72);
       this.ControlBox = false;
       this.Controls.Add(this.OkButton);
@@ -78,6 +82,7 @@
       this.Name = "VersionUpgradeForm";
       this.ShowIcon = false;
       this.ShowInTaskbar = false;
+      this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "New Version Available";
       this.ResumeLayout(false);
       this.PerformLayout();

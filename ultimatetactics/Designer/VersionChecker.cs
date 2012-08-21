@@ -24,14 +24,14 @@ namespace UltimateTacticsDesigner.Designer
 
     private void CheckVersions()
     {
-      String remoteVersion = GetRemoteVersion();
+      String remoteVersion = GetRemoteVersion().Trim().TrimEnd(Environment.NewLine.ToCharArray());
 
       // If the remove version is null then the method to retrieve it failed
       // so don't want the user just silently continue.
       if (remoteVersion != null && remoteVersion != Settings.Default.Version)
       {
         mMainForm.Invoke(new Action(delegate {
-          (new VersionUpgradeForm()).Show();
+          (new VersionUpgradeForm()).ShowDialog();
         }));
       }
     }

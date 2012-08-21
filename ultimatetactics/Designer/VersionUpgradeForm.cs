@@ -15,8 +15,6 @@ namespace UltimateTacticsDesigner.Designer
     public VersionUpgradeForm()
     {
       InitializeComponent();
-
-      newVersionLink.Links.Add(new LinkLabel.Link(0, 20, Settings.Default.DownloadServer);
     }
 
     private void OkButton_Click(object sender, EventArgs e)
@@ -27,6 +25,11 @@ namespace UltimateTacticsDesigner.Designer
       {
         Settings.Default.ShowUpgradeDialog = false;
       }
+    }
+
+    private void newVersionLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+    {
+      System.Diagnostics.Process.Start(Settings.Default.DownloadServer);
     }
   }
 }

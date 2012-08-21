@@ -61,7 +61,10 @@ namespace UltimateTacticsDesigner.Designer
       // correct frame is increased in size.
       frameCollection.CurrentFrameChanged(viewPanel.CurrentFrame);
 
-      mVersionChecker = new VersionChecker(this);
+      if (Settings.Default.ShowUpgradeDialog)
+      {
+        mVersionChecker = new VersionChecker(this);
+      }
     }
 
     ~MainDesignerForm()
