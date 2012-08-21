@@ -176,10 +176,11 @@ namespace UltimateTacticsDesigner.Designer
               Player closestPlayer = CurrentFrame.GetClosestPlayer(pitchCoords, 
                                                                    Settings.Default.PlayerDiameter);
 
-              if (CurrentFrame.DiscFrameMovement.Thrower == closestPlayer && closestPlayer != null)
+              if (CurrentFrame.DiscFrameMovement.Thrower == closestPlayer && 
+                  closestPlayer != null &&
+                  !CurrentFrame.DiscFrameMovement.HasMoved)
               {
-                CurrentTool = new DiscFlightTool(null);
-                VisualOverlay.DrawingDiscMovement = true;
+                DesignerForm.StartDrawingDiscFlight();
               }
             }
             else
@@ -213,11 +214,11 @@ namespace UltimateTacticsDesigner.Designer
           // Handle mouse down in play mode.
           if (PlayingThread.ThreadState == PlayThreadState.Paused)
           {
-            PlayingThread.Continue();
+            DesignerForm.ContinuePlaying();
           }
           else
           {
-            PlayingThread.Pause();
+            DesignerForm.PausePlaying();
           }
         }
       }
@@ -324,23 +325,26 @@ namespace UltimateTacticsDesigner.Designer
     /// <param name="coords"></param>
     internal void ChooseCursor(Point coords)
     {
-      PointF pitchCoords = Converter.screenToPitchCoords(coords);
+      if (IsDesignMode)
+      {
+        PointF pitchCoords = Converter.screenToPitchCoords(coords);
 
-      if ((KeyPressHandler.IsKeyPressed(Keys.ControlKey) ||
-           KeyPressHandler.IsKeyPressed(Keys.ShiftKey)) &&
-          CurrentFrame.CanDrawCut(pitchCoords, Settings.Default.PlayerDiameter, 0.0f))
-      {
-        Cursor.Current = Cursors.Cross;
-      }
-      else if (CurrentFrame.CanMoveItem(pitchCoords,
-                                   Settings.Default.PlayerDiameter / 2.0f,
-                                   0.0f))
-      {
-        Cursor.Current = Cursors.Hand;
-      }
-      else
-      {
-        Cursor.Current = Cursors.Default;
+        if ((KeyPressHandler.IsKeyPressed(Keys.ControlKey) ||
+             KeyPressHandler.IsKeyPressed(Keys.ShiftKey)) &&
+            CurrentFrame.CanDrawCut(pitchCoords, Settings.Default.PlayerDiameter, 0.0f))
+        {
+          Cursor.Current = Cursors.Cross;
+        }
+        else if (CurrentFrame.CanMoveItem(pitchCoords,
+                                     Settings.Default.PlayerDiameter / 2.0f,
+                                     0.0f))
+        {
+          Cursor.Current = Cursors.Hand;
+        }
+        else
+        {
+          Cursor.Current = Cursors.Default;
+        }
       }
     }
 
@@ -409,46 +413,49 @@ namespace UltimateTacticsDesigner.Designer
     {
       this.MenuItems.Clear();
 
-      // The mouse location comes in here as the location on the entire application
-      // We need to use PointToClient to convert it to mouse location on the view
-      // panel.
-      Point mouseLocation = Cursor.Position;
-      mMouseLocation = mViewPanel.PointToClient(mouseLocation);
-      PointF pitchCoordinates = mViewPanel.Converter.screenToPitchCoords(mMouseLocation);
-      PlayFrame currentFrame = mViewPanel.CurrentFrame;
+      if (mViewPanel.IsDesignMode)
+      {
+        // The mouse location comes in here as the location on the entire application
+        // We need to use PointToClient to convert it to mouse location on the view
+        // panel.
+        Point mouseLocation = Cursor.Position;
+        mMouseLocation = mViewPanel.PointToClient(mouseLocation);
+        PointF pitchCoordinates = mViewPanel.Converter.screenToPitchCoords(mMouseLocation);
+        PlayFrame currentFrame = mViewPanel.CurrentFrame;
 
-      // Find out what was near the right click.
-      mClickedPlayer = currentFrame.GetClosestPlayer(pitchCoordinates,
-                                                     Settings.Default.PlayerDiameter);
-      mClickedTrigger = currentFrame.GetClosestTrigger(pitchCoordinates,
+        // Find out what was near the right click.
+        mClickedPlayer = currentFrame.GetClosestPlayer(pitchCoordinates,
                                                        Settings.Default.PlayerDiameter);
-      mClickedCutRatio = mViewPanel.CurrentFrame.GetClosestCutPoint(pitchCoordinates,
-                                                                    Settings.Default.PlayerDiameter,
-                                                                    null);
-      bool discPathClicked = currentFrame.IsOnFlightPath(pitchCoordinates,
+        mClickedTrigger = currentFrame.GetClosestTrigger(pitchCoordinates,
                                                          Settings.Default.PlayerDiameter);
-      if (mClickedPlayer != null)
-      {
-        SetUpPlayerMenu();
-      }
-      if (mClickedTrigger != null)
-      {
-        SetUpTriggerMenu();
-      }
-      if (mClickedCutRatio != null)
-      {
-        SetUpCutMenu();
-      }
-      if (discPathClicked)
-      {
-        SetUpDiscFlightMenu();
-      }
-      if (currentFrame.CanDrawCut(pitchCoordinates, Settings.Default.PlayerDiameter, 0.0f))
-      {
-        SetUpNewCutMenu();
-      }
+        mClickedCutRatio = mViewPanel.CurrentFrame.GetClosestCutPoint(pitchCoordinates,
+                                                                      Settings.Default.PlayerDiameter,
+                                                                      null);
+        bool discPathClicked = currentFrame.IsOnFlightPath(pitchCoordinates,
+                                                           Settings.Default.PlayerDiameter);
+        if (mClickedPlayer != null)
+        {
+          SetUpPlayerMenu();
+        }
+        if (mClickedTrigger != null)
+        {
+          SetUpTriggerMenu();
+        }
+        if (mClickedCutRatio != null)
+        {
+          SetUpCutMenu();
+        }
+        if (discPathClicked)
+        {
+          SetUpDiscFlightMenu();
+        }
+        if (currentFrame.CanDrawCut(pitchCoordinates, Settings.Default.PlayerDiameter, 0.0f))
+        {
+          SetUpNewCutMenu();
+        }
 
-      base.OnPopup(e);
+        base.OnPopup(e);
+      }
     }
 
     private void SetUpDiscFlightMenu()

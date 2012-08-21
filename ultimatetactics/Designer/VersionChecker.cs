@@ -31,7 +31,7 @@ namespace UltimateTacticsDesigner.Designer
       if (remoteVersion != null && remoteVersion != Settings.Default.Version)
       {
         mMainForm.Invoke(new Action(delegate {
-          MessageBox.Show("There is a new version available from http://ultimateplaybook.com");
+          (new VersionUpgradeForm()).Show();
         }));
       }
     }

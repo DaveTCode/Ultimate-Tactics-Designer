@@ -265,6 +265,7 @@ namespace UltimateTacticsDesigner.Designer
     {
       if (viewPanel.PlayingThread != null)
       {
+        playButton.ImageIndex = 0;
         viewPanel.PlayingThread.Pause();
       }
     }
@@ -276,6 +277,7 @@ namespace UltimateTacticsDesigner.Designer
     {
       if (viewPanel.PlayingThread != null)
       {
+        playButton.ImageIndex = 1;
         viewPanel.PlayingThread.Continue();
       }
     }
@@ -608,12 +610,10 @@ namespace UltimateTacticsDesigner.Designer
       }
       else if (viewPanel.PlayingThread.ThreadState == PlayThreadState.Paused)
       {
-        playButton.ImageIndex = 1;
         ContinuePlaying();
       }
       else if (viewPanel.PlayingThread.ThreadState == PlayThreadState.Playing)
       {
-        playButton.ImageIndex = 0;
         PausePlaying();
       }
     }
